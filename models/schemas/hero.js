@@ -9,6 +9,15 @@ const heroSchema = Schema({
   },
   descr: {
     type: String
+  },
+  superpower: {
+    type: String
+  },
+  phrase: {
+    type: String
+  },
+  image: {
+    type: String
   }
 });
 

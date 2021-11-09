@@ -1,9 +1,9 @@
 const { heroes: service } = require('../../services');
 
 const addHero = async (req, res) => {
-  const { nickname, name, descr } = req.body;
+  const { nickname, name, descr, superpower, phrase, image } = req.body;
   console.log(req.body);
-  if (!nickname || !name || !descr) {
+  if (!nickname || !name || !descr || !superpower || !phrase || !image) {
     return res.status(400).send({
       err: 'Please enter a characters.'
     });
