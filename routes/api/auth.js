@@ -13,6 +13,6 @@ router.post('/signup', validation(joiSchema), ctrlWrapper(ctrl.signup));
 router.get('/verify/:verifyToken', ctrlWrapper(ctrl.verifyEmail));
 router.post('/signin', validation(joiSchema), ctrlWrapper(ctrl.signin));
 router.get('/current', authentificate, ctrlWrapper(ctrl.getCurrentUser));
-router.get('/logout', ctrlWrapper(ctrl.logout));
+router.get('/logout', authentificate, ctrlWrapper(ctrl.logout));
 
 module.exports = router;
