@@ -1,10 +1,10 @@
-const { User } = require("../models");
+const { User } = require('../models');
 
-const getOne = (filter) => {
+const getOne = filter => {
   return User.findOne(filter);
 };
 
-const getById = (id) => User.findById(id);
+const getById = id => User.findById(id);
 
 const add = ({ password, ...rest }) => {
   const newUser = new User(rest);
@@ -21,5 +21,5 @@ module.exports = {
   getOne,
   add,
   getById,
-  update,
+  update
 };

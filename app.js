@@ -35,6 +35,8 @@ app.use('/api/v1/auth', api.auth);
 
 app.use('/api/v1/user', api.users);
 
+app.use('/api/v1/hero', api.heroes);
+
 app.use((_, res) => {
   res.status(404).send({
     status: 'error',
