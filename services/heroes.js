@@ -6,6 +6,19 @@ const add = ({ ...rest }) => {
   return newHero.save();
 };
 
+const remove = async id => {
+  console.log(id);
+
+  const hero = await Hero.findById(id);
+
+  if (!hero || hero.length < 1) return false;
+
+  const result = await Hero.findByIdAndRemove(id);
+
+  return result;
+};
+
 module.exports = {
-  add
+  add,
+  remove
 };

@@ -18,6 +18,9 @@ const heroSchema = Schema({
   },
   image: {
     type: String
+  },
+  id: {
+    type: String
   }
 });
 
