@@ -3,7 +3,7 @@
 Тех.задание JS Ninjas
 
 Рабочая ссылка проекта:
-https://
+https://yamchinsky.github.io/superheroes-back/
 
 Перед началом работы
 
