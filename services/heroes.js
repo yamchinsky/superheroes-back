@@ -20,6 +20,12 @@ const getHeroName = async heroName => {
   return heroByName;
 };
 
+const update = async (id, data) => {
+  const result = await Hero.findByIdAndUpdate({ _id: id }, data, { new: true });
+
+  return result;
+};
+
 const remove = async id => {
   const result = await Hero.findByIdAndRemove({ _id: id });
 
@@ -27,8 +33,9 @@ const remove = async id => {
 };
 
 module.exports = {
+  getHeroName,
   add,
+  update,
   remove,
-  findHeroById,
-  getHeroName
+  findHeroById
 };
