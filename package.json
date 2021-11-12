@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yamchinsky/superheroes-back .git"
+    "url": "git+https://github.com/yamchinsky/superheroes-back.git"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/yamchinsky/superheroes-back/issues"
   },
-  "homepage": "https://github.com/yamchinsky/superheroes-back#readme",
+  "homepage": "https://github.com/yamchinsky/github.io/superheroes-back",
   "devDependencies": {
     "nodemon": "^2.0.12"
   },
