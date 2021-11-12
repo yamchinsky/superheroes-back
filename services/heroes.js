@@ -6,19 +6,29 @@ const add = ({ ...rest }) => {
   return newHero.save();
 };
 
+const findHeroById = async id => {
+  console.log('id in services', id);
+  const hero = await Hero.findOne({ _id: id }).exec();
+  return hero;
+};
+
+const getHeroName = async heroName => {
+  const heroByName = await Hero.find({
+    name: new RegExp(heroName, 'i')
+  }).exec();
+
+  return heroByName;
+};
+
 const remove = async id => {
-  console.log(id);
-
-  const hero = await Hero.findById(id);
-
-  if (!hero || hero.length < 1) return false;
-
-  const result = await Hero.findByIdAndRemove(id);
+  const result = await Hero.findByIdAndRemove({ _id: id });
 
   return result;
 };
 
 module.exports = {
   add,
-  remove
+  remove,
+  findHeroById,
+  getHeroName
 };

@@ -4,8 +4,10 @@ const router = express.Router();
 
 const { hero: ctrl } = require('../../controllers');
 
-router.post('/', ctrlWrapper(ctrl.addHero));
 router.get('/', ctrlWrapper(ctrl.getHero));
+router.get('/name/:name', ctrlWrapper(ctrl.getHeroByName));
+router.get('/:id', ctrlWrapper(ctrl.getHeroById));
+router.post('/', ctrlWrapper(ctrl.addHero));
 router.delete('/:id', ctrlWrapper(ctrl.deleteHero));
 
 module.exports = router;
